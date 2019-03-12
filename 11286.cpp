@@ -4,13 +4,13 @@
 using namespace std;
 int countPopular(const map<set<int>,int>& mp)
 {
-	vector<int> combinations;
+	vector<int> combin;
 	for(auto& pair : mp)
 	{
-		combinations.push_back(pair.second);
+		combin.push_back(pair.second);
 	}
-	auto maxElem = max_element(combinations.begin(),combinations.end());
-	int c = count(combinations.begin(),combinations.end(),*maxElem);
+	auto maxElem = max_element(combin.begin(),combin.end());
+	int c = count(combin.begin(),combin.end(),*maxElem);
 	return c * *maxElem;
 	
 }
